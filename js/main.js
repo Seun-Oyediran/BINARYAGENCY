@@ -48,7 +48,7 @@ loaderTl.to('.loader', 3, {delay:4, opacity: 0, display: 'none', ease: 'slow'})
 
 
 // center text Animation
-text.to(centerText[0], 1.5, {y: 10, scaleX: 0.75, ease: 'slow',opacity: 0, display: 'none'}, '+=3')
+text.to(centerText[0], 1.5, {delay:6, y: 10, scaleX: 0.75, ease: 'slow',opacity: 0, display: 'none'}, '+=3')
     .to(centerText[1], 0.5, {translateY: 0, scaleX: 1, ease: 'slow',opacity: 1, display: 'block'})
     .to(centerText[1], 1.5, {y: 10, scaleX: 0.75, ease: 'slow',opacity: 0, display: 'none'}, '+=3')
     .to(centerText[2], 0.5, {translateY: 0, scaleX: 1, ease: 'slow',opacity: 1, display: 'block'})
@@ -77,8 +77,8 @@ function mouseHandler (e){
 }
 
 function mouseLeaveHandler (e){
-    tl.to('.center-box',1, {x: 0,y:0, ease: "slow(0.7, 0.7, false)"})
-        .to('.float', 1, {x: 0,y:0, ease: "slow(0.7, 0.7, false)"}, '-=1')
+    gsap.to('.center-box',0.5, {x: 0,y:0, ease: "slow(0.7, 0.7, false)"})
+    gsap.to('.float', 0.3, {x: 0,y:0, ease: "slow(0.7, 0.7, false)"}, '-=1')
 }
 
 function mouseEntered(e){
@@ -86,13 +86,13 @@ function mouseEntered(e){
     let disp = (center - e.x)/5
     let centerY = header.offsetHeight / 2
     let dispY = (centerY - e.y)/3
-    tl.to('.center-box', 1, {x: disp, y:dispY, ease: "slow(0.7, 0.7, false)"})
-        .to('.float', 1, {x: -(disp/2), y:-(dispY/2), ease: "slow(0.7, 0.7, false)"}, '-=1')
+    gsap.to('.center-box', 0.5, {x: disp, y:dispY, ease: "slow(0.7, 0.7, false)"})
+    gsap.to('.float', 0.5, {x: -(disp/2), y:-(dispY/2), ease: "slow(0.7, 0.7, false)"}, '-=1')
 }
 
 // stes position for centrl box
 function setBoxPosition (x, y){
-    tl.to('.center-box', 0, {x, y, ease: "slow(0.7, 0.7, false)"})
-        .to('.float', 0, {x: -(x/2), y: -(y/2), ease: 'slow(0.7, 0.7, false)'})
+    gsap.to('.center-box', 0.1, {x, y, ease: "slow(0.7, 0.7, false)"})
+    gsap.to('.float', 0.1, {x: -(x/2), y: -(y/2), ease: 'slow(0.7, 0.7, false)'})
 }
 

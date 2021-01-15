@@ -292,15 +292,17 @@ nav .nav {
     background-color: rgba(0,0,0,0.4);
     z-index: 10000;
     display: none;
+    overflow-y: auto;
 }
 
 .menu{
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     width: 500px;
-    background-color: #0284d0;
     height: 100%;
+    background-color: #0284d0;
+    
     padding: 2rem 3rem;
     display: flex;
     /* align-items: center; */
@@ -465,10 +467,12 @@ nav .nav {
     .center-box{
         max-height: 400px;
     }
-    /* .float{
-        transform: scale(0.5);
-    } */
-    
+    .menu{
+        display: block;
+    }
+    .menu > div p{
+        font-size: 1.1rem;
+    }
 }
 
 @media (max-height: 450px){
@@ -487,5 +491,11 @@ nav .nav {
     }
     .center-content{
         margin-bottom: 1.5rem;
+    }
+    .menu{
+        display: block;
+    }
+    .menu > div p{
+        font-size: 1.1rem;
     }
 }
