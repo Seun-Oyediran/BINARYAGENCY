@@ -153,6 +153,9 @@
        
     }
     .long-image{
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
         background-image: url('/images//pexels-djordje-petrovic-2102416.jpg');
     }
 }
