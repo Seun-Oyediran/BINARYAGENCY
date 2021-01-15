@@ -468,10 +468,24 @@ nav .nav {
     /* .float{
         transform: scale(0.5);
     } */
+    
 }
 
-@media (max-height: 550px){
+@media (max-height: 450px){
     .center-box{
         max-height: 250px;
+    }
+    .center-box{
+        max-height: 400px;
+        display: none;
+    }
+    /* .float{
+        transform: scale(0.5);
+    } */
+    .mouse{
+        display: none;
+    }
+    .center-content{
+        margin-bottom: 1.5rem;
     }
 }
