@@ -1,0 +1,477 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/* font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+a{
+    text-decoration: none;
+}
+
+.mouse{
+    position: absolute;
+    bottom: 5%;
+    border: 3px solid rgb(0,0,0);
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 45px;
+    width: 30px;
+    border-radius: 23px;
+    z-index: 2;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.small-ball{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: rgb(0,0,0);
+    transform: translateY(-12px);
+    opacity: 0;
+}
+
+.float-con{
+    position: absolute;
+    max-width: 50%;
+    z-index: 1;
+    /* top: 0;
+    left: 0; */
+    pointer-events: none;
+}
+
+.float-con2{
+    top: 0;
+    right: 0;
+    transform: translate(20%, 0%);
+}
+.float-con1{
+    top: 0;
+    left: 0;
+    transform: translate(-20%, 0%);
+}
+.float-con4{
+    bottom: 0;
+    right: 0;
+    transform: translate(20%, 20%);
+}
+.float-con6{
+    bottom: 0;
+    left: 0;
+    transform: translate(-20%, 20%);
+}
+.float-con img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* floating image styleing */
+/* .float2{
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.float1{
+    position: absolute;
+    left: -350px;
+    top: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+.float4{
+    position: absolute;
+    right: -360px;
+    bottom: -160px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.float6{
+    position: absolute;
+    left: -500px;
+    bottom: -400px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.float7{
+    position: absolute;
+    right: 200px;
+    bottom: 0px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.float5{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: 1;
+    pointer-events: none;
+} */
+
+/* end of floating styles */
+
+
+/* general container style */
+.container{
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+    font-family: 'Raleway', sans-serif;
+}
+
+.fullscreen{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* header styling */
+.header{
+    position: relative;
+    background-color: #e0e0e0;
+    overflow-x: hidden;
+    flex: 1;
+    height: 100%;
+    
+}
+nav{
+    background-color: #e0e0e0;
+    position: relative;
+}
+
+.hamburger{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: rgba(0,0,0,0.8);
+    z-index: 10;
+    padding: 10px;
+    cursor: pointer;
+}
+nav .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    background-color: transparent;
+    position: relative;
+    z-index: 2;
+}
+
+.nav > div  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 -15px;
+}
+
+.nav  p{
+    margin: 0 15px;
+    padding: 8px;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-size: 17px;
+    transition: all 0.5s ease;
+}
+.nav p:hover{
+    color: #008cba;
+}
+
+.title{
+    padding: 0 0.5rem ;
+}
+.title span{
+    color: #008cba;
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 500px;
+    max-height: 500px;
+    /* margin: 0 20px; */
+    /* padding: 0 1rem; */
+    z-index: 3;
+    width: 100%;
+}
+
+.center-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+.center-content h2{
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 46px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.center-content h2:nth-of-type(2), .center-content h2:nth-of-type(3){
+    opacity: 0;
+    display: none;
+    transform: scaleX(2) translateY(-30px);
+}
+
+.center-content p{
+    line-height: 31px;
+    font-weight: 500;
+    font-size: 17px;
+    text-align: center;
+    width: 90%;
+    margin: 1rem auto;
+}
+
+
+.center-content a{
+    display: inline-block;
+    background: #008cba;
+    border-color: #008cba;
+    color: #fff;
+    font-size: 18px;
+    padding: 15px 40px !important;
+    line-height: 24px;
+    font-weight: 400;
+    border-radius: 50px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: 0.4s all ease;
+}
+
+.center-content a:hover{
+    background-color: black;
+}
+
+
+
+.center-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 7px solid rgba(210,13,85,0.9);
+    width: 500px;
+    height:  500px;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    /* margin: 0 2rem; */
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+/* end of header styling */
+
+
+/* sidemenu design */
+.sidemenu{
+    position: fixed;
+    height: 100%;
+    width:  100%;
+    opacity: 0;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 10000;
+    display: none;
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 500px;
+    background-color: #0284d0;
+    height: 100%;
+    padding: 2rem 3rem;
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    justify-content: space-around;
+    overflow-y: auto;
+    transform: translateX(100%);
+}
+.menu >div > div{
+    margin: 15px 0;
+    transform: translateY(50px);
+    opacity: 0;
+}
+.menu > div p{
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    padding: 5px 0 6px 0 !important;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: normal;
+    font-family: 'Raleway', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    margin: 8px 20px;
+    cursor: pointer;
+}
+.menu > div p::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: all 0.5s ease;
+}
+
+
+.menu > div p:hover::after{
+    width: 100%;
+}
+
+.menu > p{
+    font-size: 15px;
+    color: white;
+    margin: 8px 15px;
+}
+
+.close-btn{
+    position: absolute;
+    display: inline-block;
+    top: 30px;
+    right: 15px;
+    font-size: 30px;
+   color: white;
+   padding: 10px;
+   cursor: pointer;
+}
+/* end of sidemenu */
+
+/* sticky nav bar styling */
+.sticky-nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 10;
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.35);
+    transform: translateY(-100%);
+    overflow: hidden;
+    padding: 0 0.5rem;
+}
+.sticky-nav .nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+.sticky-nav .hamburger{
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: rgba(0,0,0,0.8);
+    z-index: 10;
+    padding: 10px;
+    cursor: pointer;
+}
+.sticky-nav p{
+    position: relative;
+}
+/* end of sticky nav bar */
+
+
+/* style to make nav link change on scroll */
+.link-item{
+    position: relative;
+    color: #008cba;
+}
+
+.nav p span, .sticky-nav p  span{
+    /* content: ''; */
+    position: absolute;
+    width: 0;
+    left: 0;
+    height: 4px;
+    bottom: 0;
+    background-color: #008cba;
+    transition: all 0.3s ease ;
+}
+
+
+/* making the landing page responsive */
+
+
+@media (max-width: 1265px){
+    nav .container, .sticky-nav .container{
+        width: 90%;
+    }
+}
+
+@media (max-width: 1130px){
+    .nav > div {
+        display: none;
+    }
+}
+
+
+@media (max-width: 930px){
+    .container{
+        width: 80%;
+    }
+}
+
+@media (max-width: 700px){
+    .container{
+        width: 85%;
+    }
+    .center-box{
+        width: 90%;
+        max-height: 500px;
+    }
+    /* .float{
+        transform-origin: center center;
+        transform: scale(0.75);
+    } */
+    .menu{
+        width: 300px;
+        display: block;
+    }
+    .menu > div{
+        padding-bottom: 1.5rem;
+    }
+}
+@media (max-width: 400px){
+    .container{
+        width: 90%;
+    }
+    .center-box{
+        max-height: 400px;
+    }
+    /* .float{
+        transform: scale(0.5);
+    } */
+}
+
+@media (max-height: 550px){
+    .center-box{
+        max-height: 250px;
+    }
+}

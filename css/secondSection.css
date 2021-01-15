@@ -1,0 +1,158 @@
+.second-section{
+    background-color: #f7f7f7;
+}
+.second-section-content{
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    display: flex;
+}
+
+.second-section-content .text-content{
+    padding: 2rem 0;
+    align-self: center;
+    flex: 1;
+    justify-self: flex-end;
+    /* padding-left: 15%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* padding-right: 2rem; */
+    padding: 1.5rem;
+}
+
+.second-section-content .text-content h1{
+    font-size: 40px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    position: relative;
+    color: #232323;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.second-section-content .text-content h1::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 5rem;
+    height: 1px;
+    background-color: #232323;
+}
+
+.second-section-content .text-content h3{
+    font-size: 18px;
+    margin: 0;
+    word-spacing: 2px;
+    line-height: 32px;
+    color: #6d6d6d;
+    font-weight: 100;
+}
+
+.second-section-content .text-content p{
+    font-size: 14px;
+    margin: 0;
+    word-spacing: 2px;
+    line-height: 28px;
+    color: #676767;
+    width: 70%;
+    margin: auto;
+}
+.second-section-content .img-con{
+    max-width: 100%;
+    flex: 1;
+}
+
+.second-section-content img{
+    width: 100%;
+    max-height: 900px;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.long-image{
+    background: url('/images/pexels-lukas-577210.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: bottom bottom;
+    padding: 5rem 0;
+    position: relative;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.long-image::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.long-image .stats{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+}
+
+.long-image .stats > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2.5rem 0;
+}
+.long-image .stats h3{
+    font-size: 40px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;   
+}
+
+
+.long-image .stats p{
+    font-size: 20px;
+}
+
+
+
+
+@media(max-width: 950px){
+    .second-section-content .text-content p{
+        width: 80%;
+    }
+    .second-section-content .text-content h1{
+        font-size: 30px;
+    }
+}
+
+@media(max-width: 800px){
+    .second-section-content{
+        display: block;
+    }
+    .second-section-content .text-content h1{
+        font-size: 25px;
+    }.second-section-content .text-content p{
+        width: 90%;
+    }
+    .second-section-content img{
+        display: none;
+
+    }
+    .long-image .stats{
+        display: block;
+       
+    }
+    .long-image{
+        background-image: url('/images//pexels-djordje-petrovic-2102416.jpg');
+    }
+}
