@@ -18,7 +18,7 @@
     align-items: center;
     flex-direction: column;
     /* padding-right: 2rem; */
-    padding: 1.5rem;
+    padding: 0.5rem;
 }
 
 .second-section-content .text-content h1{
@@ -60,6 +60,7 @@
     color: #676767;
     width: 70%;
     margin: auto;
+    padding: 1.5rem 0;
 }
 .second-section-content .img-con{
     max-width: 100%;
@@ -138,6 +139,9 @@
 @media(max-width: 800px){
     .second-section-content{
         display: block;
+    }
+    .second-section-content .text-content{
+        padding: 3rem 0;
     }
     .second-section-content .text-content h1{
         font-size: 25px;

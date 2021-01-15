@@ -8,7 +8,7 @@ const startedBtn = document.querySelector('.center-content a')
 const mouseBtn = document.querySelector('.mouse')
 // const secondSection = document.querySelector('.second-section')
 const thirdSection = document.querySelector('.third-section')
-
+const fourthSection = document.querySelector('.fourth-section')
 
 // const navTl = gsap.timeline()
 const navHeight = nav.offsetHeight 
@@ -42,6 +42,7 @@ function getDimensions(){
     changeLink(fullscreen, navLinks[0], navLinksAfter[0])
     changeLink(aboutSection, navLinks[1], navLinksAfter[1])
     changeLink(thirdSection, navLinks[2], navLinksAfter[2])
+    changeLink(fourthSection, navLinks[3], navLinksAfter[3])
 }
 
 
