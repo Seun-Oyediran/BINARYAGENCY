@@ -13,7 +13,7 @@ const thirdSection = document.querySelector('.third-section')
 // const navTl = gsap.timeline()
 const navHeight = nav.offsetHeight 
 
-const elementsLocations = ['.fullscreen', '.first-section-content']
+const elementsLocations = ['.fullscreen', '.about-section']
 
 // register Plugin
 gsap.registerPlugin(ScrollToPlugin)
