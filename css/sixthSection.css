@@ -1,11 +1,10 @@
 .sixth-section{
-    padding: 5rem 0;
+    padding: 6rem 0;
     background-image: url('/images/pexels-burak-k-93820.jpg');
     background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-bottom: 50vh;
     color: white;
     position: relative;
 }
@@ -80,3 +79,22 @@
 
 
 
+@media(max-width: 700px){
+    .sixth-section .text-content > h1{
+        font-size: 35px;
+    }
+}
+
+
+@media(max-width: 500px){
+    
+    .sixth-section .text-content > h1{
+        font-size: 25px;
+    }
+    .sixth-section .remarks p:nth-of-type(1){
+        font-size: 14px;
+    }
+    .sixth-section .remarks p:nth-of-type(1){
+        font-size: 16px;
+    }
+}

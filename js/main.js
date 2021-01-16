@@ -4,7 +4,10 @@ const hamburger = document.querySelectorAll('.hamburger')
 const closeBtn = document.querySelector('.close-btn')
 const centerText = document.querySelectorAll('.center-content h2')
 
-
+document.querySelector('form').addEventListener('submit',(e)=>{
+    e.preventDefault()
+    return
+})
 
 // adding event listeners
 header.addEventListener("mousemove", mouseHandler);
@@ -42,9 +45,9 @@ function checkAnimation (params){
 
 
 // animation to remove loader
-// loaderTl.to('.loader', 3, {delay:4, opacity: 0, display: 'none', ease: 'slow'})
-//     .to('.loading',0.1, { display:'block'}, '-=3')
-//     .to('.loading',3, {opacity: 1, display:'block', ease: 'slow'}, '-=2')
+loaderTl.to('.loader', 3, {delay:4, opacity: 0, display: 'none', ease: 'slow'})
+    .to('.loading',0.1, { display:'block'}, '-=3')
+    .to('.loading',3, {opacity: 1, display:'block', ease: 'slow'}, '-=2')
 
 
 // center text Animation

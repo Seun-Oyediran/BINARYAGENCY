@@ -6,20 +6,33 @@ const navLinks = document.querySelectorAll('.sticky-nav p')
 const navLinksAfter = document.querySelectorAll('.sticky-nav p span')
 const startedBtn = document.querySelector('.center-content a')
 const mouseBtn = document.querySelector('.mouse')
-// const secondSection = document.querySelector('.second-section')
+const sixthSection = document.querySelector('.sixth-section')
 const thirdSection = document.querySelector('.third-section')
 const fourthSection = document.querySelector('.fourth-section')
+const fifthSection = document.querySelector('.fifth-section')
+const seventhSection = document.querySelector('.seventh-section')
+const topLinks = document.querySelectorAll('nav .links p')
+const sideMenuLinks = document.querySelectorAll('.sidemenu-links p')
+
 
 // const navTl = gsap.timeline()
 const navHeight = nav.offsetHeight 
 
-const elementsLocations = ['.fullscreen', '.about-section']
+const elementsLocations = ['.fullscreen', '.about-section', '.third-section', '.fourth-section', '.fifth-section', '.sixth-section', '.seventh-section', '.seventh-section']
 
 // register Plugin
 gsap.registerPlugin(ScrollToPlugin)
 
-navLinks.forEach(item=> item.addEventListener('click', ()=>{
-    jumpTo(elementsLocations[0])
+navLinks.forEach((item, index)=> item.addEventListener('click', ()=>{
+    jumpTo(elementsLocations[index])
+}))
+
+topLinks.forEach((item, index)=> item.addEventListener('click', ()=>{
+    jumpTo(elementsLocations[index])
+}))
+sideMenuLinks.forEach((item, index)=> item.addEventListener('click', ()=>{
+    menu.reverse()
+    jumpTo(elementsLocations[index])
 }))
 
 
@@ -43,6 +56,9 @@ function getDimensions(){
     changeLink(aboutSection, navLinks[1], navLinksAfter[1])
     changeLink(thirdSection, navLinks[2], navLinksAfter[2])
     changeLink(fourthSection, navLinks[3], navLinksAfter[3])
+    changeLink(fifthSection, navLinks[4], navLinksAfter[4])
+    changeLink(sixthSection, navLinks[5], navLinksAfter[5])
+    changeLink(seventhSection, navLinks[7], navLinksAfter[7])
 }
 
 
@@ -74,7 +90,7 @@ function changeLink (element, firstLink, secondLink){
 
 function jumpTo(location){
     console.log(123);
-    gsap.to(window, 1.5 , {scrollTo: {y: location, offsetY: navHeight}, ease: "circ.out"})
+    gsap.to(window, 1.5 , {scrollTo: {y: location, offsetY: (navHeight-10)}, ease: "circ.out"})
 }
 
 

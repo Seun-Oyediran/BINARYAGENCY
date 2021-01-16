@@ -9,7 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-   
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
+
+
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/firstSection.css">
     <link rel="stylesheet" href="/css/secondSection.css">
@@ -17,21 +20,22 @@
     <link rel="stylesheet" href="/css/fourthSection.css">
     <link rel="stylesheet" href="/css/fifthSection.css">
     <link rel="stylesheet" href="/css/sixthSection.css">
+    <link rel="stylesheet" href="/css/seventhSection.css">
     <link rel="stylesheet" href="/css/loader.css">
 </head>
 <body>
-    <!-- <div class="loader">
+    <div class="loader">
         <h2 class="title title-loader">
             <span>BINARY</span>AGENCY<span>.</span></h2>
         <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-    </div> -->
+    </div>
   
 
     <div class="sidemenu ">
         
         <div class="menu">
             <span class="close-btn"><i class="fas fa-times"></i></span>
-            <div>
+            <div class="sidemenu-links">
                 <div>
                     <p>Home</p>         
                 </div>
@@ -327,7 +331,7 @@
     <!-- end of fourth section -->
 
     <!-- fifth section starts here -->
-    <section class="fifth-section">
+    <section class="fifth-section loading">
         <div class="fifth-section-content">
             <div class="container">
                 <div class="text-content">
@@ -419,7 +423,7 @@
     <!-- end of fifth section -->
 
     <!-- sixth section -->
-    <section class="sixth-section">
+    <section class="sixth-section loading">
         <div class="container">
             <div class="text-content">
                 <h1>Client <strong>Testimonials</strong></h1>
@@ -446,11 +450,106 @@
     <!-- end of sixth section -->
 
 
+    <!-- seventh section starts here -->
+
+    <section class="seventh-section loading">
+        <div class="container">
+            <div class="text-content">
+                <h5>Heros Of Our Company</h5>
+                <h2>Contact Us</h2>
+                <p>Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitudin. Quisque vitae sodales lectus. Nam porttitor justo sed mi finibus, vel tristique risus faucibus.</p>
+            </div>
+            <div class="contact-us">
+                <div class="location">
+                    <div>
+                        <span>
+                            <i class="fas fa-map-marker-alt"></i>
+                        </span>
+                        <h4>
+                            Visit Us
+                            <br>
+                            <span>
+                                Sagamu, Nigeria
+                            </span>
+                        </h4>
+                    </div>
+                    <div>
+                        <span>
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <h4>
+                            Email Us
+                            <br>
+                            <span>
+                                seunoyediran22517@gmail.com
+                            </span>
+                        </h4>
+                    </div>
+                    <div>
+                        <span>
+                            <i class="fas fa-globe-americas"></i>
+                        </span>
+                        <h4>
+                            Our Support
+                            <br>
+                            <span>
+                                support@info.com
+                            </span>
+                        </h4>
+                    </div>
+                   
+                </div>
+                <div class="form">
+                    <form>
+                        <div class="input">
+                            <input type="text" placeholder="name">
+                        </div>
+                        <div class="input" >
+                            <input type="email" placeholder="email">
+                        </div>
+                        <div class="input">
+                            <input type="text" placeholder="phone">
+                        </div>
+                        <div class="input">
+                            <input type="text" placeholder="website" >
+                        </div>
+                        <div class="input input-textarea">
+                            <textarea placeholder="comment"></textarea>
+                        </div>
+                        <div class="submit">
+                            <button>
+                                submit request
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="map-con">
+                <p><span></span> You</p>
+                <p><span class="binary"></span> Binary Agency</p>
+                <div id="map">
+
+                </div>
+            </div>
+            
+        </div>
+    </section>
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
+    <!-- end of seventh section -->
+
+
+    <!-- footer markup -->
+    <footer class="loading">
+        <div class="container">
+            <p>© 2020 Themes Industry, All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- end of footer markup -->
+
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
@@ -458,6 +557,9 @@
             offset: 150
         });
       </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
+   
 
       <!-- owl js -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
@@ -477,9 +579,34 @@
     <script src="/js/main.js"></script>
     <script src="/js/navBar.js"></script>
     <script src="/js/scroll.js"></script>
+    <script src="/js/map.js"></script>
     <style>
         .owl-carousel .active span{
             background-color: coral !important;
+        }
+        .map-con{
+            margin: 20px 0;
+        }
+        .map-con span{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: coral;
+            margin-right: 5px;
+        }
+        .map-con .binary{
+            background-color: #008cba;
+        }
+        .map-con p{
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+        #map{
+            /* max-height: 90vh; */
+            min-height: 400px;
+            width: 100%;
         }
     </style>
 </body>
