@@ -172,6 +172,37 @@ footer p{
 /* end of footer style */
 
 
+
+/* map styling */
+.owl-carousel .active span{
+    background-color: coral !important;
+}
+.map-con{
+    margin: 20px 0;
+}
+.map-con span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: coral;
+    margin-right: 5px;
+}
+.map-con .binary{
+    background-color: #008cba;
+}
+.map-con p{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+#map{
+    /* max-height: 90vh; */
+    min-height: 400px;
+    width: 100%;
+}
+
+
 @media(max-width: 1350px){
     .seventh-section .container{
         width: 80%;

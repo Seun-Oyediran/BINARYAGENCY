@@ -9,6 +9,8 @@ document.querySelector('form').addEventListener('submit',(e)=>{
     return
 })
 
+let animationID 
+
 // adding event listeners
 header.addEventListener("mousemove", mouseHandler);
 header.addEventListener('mouseleave', mouseLeaveHandler)
@@ -45,9 +47,9 @@ function checkAnimation (params){
 
 
 // animation to remove loader
-loaderTl.to('.loader', 3, {delay:4, opacity: 0, display: 'none', ease: 'slow'})
-    .to('.loading',0.1, { display:'block'}, '-=3')
-    .to('.loading',3, {opacity: 1, display:'block', ease: 'slow'}, '-=2')
+// loaderTl.to('.loader', 3, {delay:4, opacity: 0, display: 'none', ease: 'slow'})
+//     .to('.loading',0.1, { display:'block'}, '-=3')
+//     .to('.loading',3, {opacity: 1, display:'block', ease: 'slow'}, '-=2')
 
 
 // center text Animation
@@ -85,6 +87,7 @@ function mouseLeaveHandler (e){
 }
 
 function mouseEntered(e){
+    
     let center = header.offsetWidth / 2
     let disp = (center - e.x)/5
     let centerY = header.offsetHeight / 2
@@ -97,5 +100,27 @@ function mouseEntered(e){
 function setBoxPosition (x, y){
     gsap.to('.center-box', 0.1, {x, y, ease: "slow(0.7, 0.7, false)"})
     gsap.to('.float', 0.1, {x: -(x/2), y: -(y/2), ease: 'slow(0.7, 0.7, false)'})
+}
+
+
+
+
+//for downloading as pdf
+
+document.querySelector('.pdf-btn').addEventListener('click', downloadPDF)
+
+function downloadPDF (){
+    const doc = new jsPDF();
+    let htmlData = document.querySelector('#pdf-content')
+    let specialElementHandlers = {
+        '#editor': function (element, renderer) {
+      return true;
+  }}
+    doc.fromHTML(htmlData, 15, 15, {
+        'width': 170,
+        'elementHandlers': specialElementHandlers,
+        
+    })
+    doc.save('Binary-Skills')
 }
 
